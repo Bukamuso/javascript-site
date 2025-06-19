@@ -26,11 +26,16 @@
                 var systemUsername = "Bond";
                 var systemPassword = "007";
 
-                if(username == systemUsername && password == systemPassword){
-                    document.getElementById("message").innerText = "Correct. Logging you in..."
+                if (username === systemUsername && password === systemPassword) {
+                const message = document.getElementById("message");
+                message.innerText = "✅ Correct. Logging you in...";
+                message.className = "success";
                 } else {
-                    document.getElementById("message").innerText = "Username or password are incorrect.";
-                }
+                const message = document.getElementById("message");
+                message.innerText = "❌ Incorrect username or password.";
+                message.className = "";
+}
+
             }
 
         </script>
