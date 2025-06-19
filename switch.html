@@ -11,7 +11,7 @@
             <option value="snowy">Snowy</option>
             <option value="cloudy">Cloudy</option>
         </select>
-        <a href="#" onclick="btnPressed"()>GO!</a>
+        <a href="#" onclick="btnPressed()">GO!</a>
         <p id="outputText">Weather advice:</p>
 
         <script>
@@ -20,9 +20,21 @@
                 var advice;
 
                 switch(weatherSelected){
-                        case "sunny";
-                            advice = "Wear your sunglasses";
+                        case "sunny":
+                            advice = ": Wear your sunglasses";
                             break;
+                            case "windy":
+                                advice = ": Wear a jacket"
+                                break;
+                                case "rainy":
+                                advice = ": Wear a raincoat and carry an umbrella"
+                                break;
+                                case "snowy":
+                                advice = ": Dress warmly"
+                                break;
+                                case "cloudy":
+                                advice = ": Carry a jacket and an umbrella. It might rain."
+                                break;
 
 
                 }
