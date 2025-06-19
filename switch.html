@@ -3,41 +3,46 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <label for="weather">What's the weather like?</label>
-        <select id="weather">
+        <div class="container">
+            <label for="weather">What's the weather like?</label>
+            <select id="weather">
             <option value="sunny">Sunny</option>
             <option value="windy">Windy</option>
             <option value="rainy">Rainy</option>
             <option value="snowy">Snowy</option>
             <option value="cloudy">Cloudy</option>
-        </select>
-        <a href="#" onclick="btnPressed()">GO!</a>
-        <p id="outputText">Weather advice:</p>
+            </select>
+            <button onclick="btnPressed()">GO!</button>
+            <p id="outputText">Weather advice will appear here.</p>
+            </div>
 
         <script>
             function btnPressed(){
                 var weatherSelected = document.getElementById("weather").value;
-                var advice;
+                var advice = "";
 
-                switch(weatherSelected){
-                        case "sunny":
-                            advice = ": Wear your sunglasses";
-                            break;
-                            case "windy":
-                                advice = ": Wear a jacket"
-                                break;
-                                case "rainy":
-                                advice = ": Wear a raincoat and carry an umbrella"
-                                break;
-                                case "snowy":
-                                advice = ": Dress warmly"
-                                break;
-                                case "cloudy":
-                                advice = ": Carry a jacket and an umbrella. It might rain."
-                                break;
-
-
-                }
+                switch (weatherSelected) {
+                case "sunny":
+                advice = "☀️ Wear your sunglasses";
+                document.body.style.backgroundColor = "#fff9c4";
+                break;
+                case "windy":
+                advice = "🍃 Wear a jacket";
+                document.body.style.backgroundColor = "#b3e5fc";
+                break;
+                case "rainy":
+                advice = "🌧️ Wear a raincoat and carry an umbrella";
+                document.body.style.backgroundColor = "#90a4ae";
+                break;
+                case "snowy":
+                advice = "❄️ Dress warmly";
+                document.body.style.backgroundColor = "#e0f7fa";
+                break;
+                case "cloudy":
+                advice = "☁️ Carry a jacket and an umbrella. It might rain.";
+                document.body.style.backgroundColor = "#cfd8dc";
+                break;
+            }
                 document.getElementById("outputText").innerHTML = "Weather advice" + advice;
             }
 
